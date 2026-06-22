@@ -1,0 +1,10 @@
+ <svg
+            width="60"
+            height="70"
+            viewBox=" 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+            className="text-(--text-color)"
+          >
+            <rect x="10" y="10" width="20" height="27" fill="currentColor" />
+            <rect x="30" y="30" width="20" height="27" fill="currentColor" />
+          </svg>

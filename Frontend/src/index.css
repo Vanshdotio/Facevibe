@@ -1,0 +1,112 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+@layer base {
+  body, input, button, select, textarea {
+    background-color: #0F1115;
+    color: #FFFFFF;
+    font-family: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+}
+
+[data-theme="light"] {
+  --bg-color: rgb(255, 251, 251);
+  --text-color: black;
+  --border-color: rgb(228, 220, 220);
+  --theme-bg: #a7a7a731;
+  --theme-bg2: hsla(0, 0%, 65%, 0.525);
+  --hero-h4: rgb(48, 48, 48);
+  --shiny-text: #000000;
+  --spotlight-color: rgba(34, 164, 250, 0.767);
+  --spotlight-color2: #22a4fac4;
+  --color: #6d6d6d;
+  --footer-bg: rgb(255, 255, 255);
+  --footer-text: rgb(0, 0, 0);
+}
+@theme {
+  --color-brand-green: #00C896;
+  --color-brand: #00C896;
+  --color-brand-hover: #00D9A3;
+  --color-brand-active: #00B587;
+  --color-dark-input: #1c1c1f;
+  --color-dark-border: #27272a;
+  --font-sans: "Plus Jakarta Sans", "Inter", sans-serif;
+  --font-display: "Plus Jakarta Sans", "Inter", sans-serif;
+}
+[data-theme="dark"] {
+  --bg-color: rgb(0, 0, 0);
+  --text-color: rgb(255, 255, 255);
+  --border-color: #252525;
+  --theme-bg: #adadad1c;
+  --theme-bg2: #adadad1c;
+  --hero-h4: rgb(153, 153, 153);
+  --shiny-text: #b5b5b5a4;
+  --radial-spotlight-color: rgba(255, 255, 255, 0.25);
+  --shiny-color1: #ffffff00;
+  --shiny-color2: #ffffffcc;
+  --shiny-color3: #ffffff00;
+  --spotlight-color: #ffffff40;
+  --spotlight-color2: #7acafff1;
+  --footer-bg: rgb(0, 0, 0);
+  --footer-text: rgb(255, 255, 255);
+}
+
+@font-face {
+  font-family: "Space Grotesk Bold";
+  src: url(../public/assets/SpaceGrotesk-Bold.woff2);
+}
+@font-face {
+  font-family: "Space Grotesk";
+  src: url(../public/assets/SpaceGrotesk-VariableFont_wght.woff2);
+}
+@font-face {
+  font-family:"Helvetica Now Display" ;
+  src: url(../public/assets/HelveticaNowDisplayMedium.woff2);
+}
+.hero-section-gradient {
+  background: linear-gradient(90deg, #4ea7fff1, #707affb7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* .radial-bg {
+  background: radial-gradient(
+    circle at center,
+    var(--radial-color3) 1%,
+    var(--radial-color2) 50%,
+    var(--radial-color1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+/* .hero-shape{} */
+.spotlight-gradient {
+  background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 50%, #06b6d4 100%);
+}
+.animation-pulse2 {
+  border-radius: 50%;
+  animation: spotlight 2s infinite;
+  z-index: 10;
+}
+@keyframes spotlight {
+  0% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(74, 222, 128, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+  }
+}
+.login-registration-bg{
+  background: linear-gradient(90deg,rgb(232, 232, 255),rgb(194, 194, 194));
+}
+.nav-signup {
+  background: linear-gradient(120deg,rgb(59, 59, 199),rgba(255, 255, 255, 0.185));
+}
