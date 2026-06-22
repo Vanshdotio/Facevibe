@@ -1,0 +1,8 @@
+# Ignore everything in the repository
+*
+
+# But do not ignore directories, so rules can still apply inside them
+!*/
+
+# Keep this .gitignore tracked so the rule stays in place
+!.gitignore
